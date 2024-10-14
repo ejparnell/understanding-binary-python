@@ -70,12 +70,14 @@ Let's start with the number 15. We know that 15 in binary is 1111. But how do we
 binary_number_15 = '1111'
 ```
 
-We can use the built in Python function `int()` to convert a decimal number to binary. by default, `int()` converts a number to a base-10 number which is the decimal system. However, we can change that behavior by passing in a second argument to `int()`. However, we can change that default behavior of converting to a base-10 number to a base-2 number by passing in a second argument to `int()`.
+We can use the built in Python function `int()` to convert a decimal number to binary. by default, `int()` converts a number to a base-10 number which is the decimal system. However, we can change that behavior by passing in a second argument to `int()`.
 
 ```python
 binary_number_15 = '1111'
 decimal_number_15 = int(binary_number_15, 2)
 ```
+
+> Notice that we are representing the binary number as a string. We do this because if we were to represent the binary number as an integer, Python would interpret it as a decimal number. We can also use the `0b` prefix to represent binary numbers in Python. For example, `0b1111` is the binary representation of the decimal number `15`.
 
 By printing `decimal_number_15`, we should see `15` as the output. It's just that simple!
 
@@ -171,7 +173,7 @@ binary_quotient = bin(int(binary_1, 2) // int(binary_2, 2)) # '0b0'(floor divisi
 
 ### Overflow in Binary Arithmetic
 
-A couple of sections back we briefly mentioned that a bit is the smallest unit of data in computing and hat it can have one of two values: 0 or 1. When represent the number `15` in binary we use 4 bits `1111`. But what happens if we need to add another bit to represent a larger number?
+A couple of sections back we briefly mentioned that a bit is the smallest unit of data in computing and that it can have one of two values: 0 or 1. When represent the number `15` in binary we use 4 bits `1111`. But what happens if we need to add another bit to represent a larger number?
 
 This is where overflow comes into play. Overflow occurs when the result of an arithmetic operation exceeds the maximum value that can be represented by the number of bits available. In our example, if we try to add `1` to `15` in binary `1111`, we would get `10000`. However, we only have 4 bits available, so the result would overflow and the leftmost bit would be lost.
 
@@ -186,6 +188,8 @@ max_bits = 4
 binary_sum = bin(int(binary_1, 2) + int(binary_2, 2)) # '0b10000'
 binary_sum_overflow = bin(int(binary_1, 2) + int(binary_2, 2) & max_bits) # '0b0'
 ```
+
+> More on what the `&` operator does in the next section.
 
 We can see in `binary_sum_overflow` that the result is `0` because the leftmost bit was lost due to overflow. Now we no longer have the binary number of `16` but `0`. Again we don't have to worry about this in Python, but it's good to know how it works under the hood.
 
@@ -269,7 +273,7 @@ print(bin(result_left_shift)) # Output: '0b1100'
 print(bin(result_right_shift)) # Output: '0b1'
 ```
 
-While we might not need to use bitwise operators on a daily basis, it's good to know that they exist and how they work. They are often used in low-level programming, cryptography, and other specialized fields.
+While we might not need to use bitwise operators on a daily basis, it's good to know that they exist and how they work. They are often used in low-level programming, cryptography, and other specialized fields. Plus this might be very useful in interviews!
 
 ## Applications of Binary in Python
 
