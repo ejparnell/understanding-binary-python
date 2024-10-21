@@ -1,4 +1,4 @@
-# Understanding Binary
+# Understanding Binary Numbers using Python
 
 In this section, we will cover the following topics:
 
@@ -18,9 +18,11 @@ While you don't have to have a deep understanding of Python to complete this les
 
 ## Introduction to Binary Numbers
 
-Okie dokie artichokie! Let's dive into the world of binary numbers. Binary numbers are a fundamental concept in computer science and digital electronics. Gottfried Wilhelm Leibniz invented the binary number system in the 17th century.
+Okie dokie artichokie! Let's dive into the world of binary numbers. Binary numbers are a fundamental concept in computer science and digital electronics. This system represents numbers using only two digits, 0 and 1. It's the foundation of all digital systems, including computers, smartphones, and other electronic devices.
 
-This system represents numbers using only two digits, 0 and 1. It's the foundation of all digital systems, including computers, smartphones, and other electronic devices.
+### Why Binary?
+
+You might be wondering, why do we use binary numbers? The answer is simple: computers are made up of billions of tiny switches called transistors. These transistors can be in one of two states: on or off. By representing numbers using only two digits, we can easily map these states to binary numbers. This makes it easier for computers to process and store information.
 
 ### Binary Representation
 
@@ -60,7 +62,7 @@ binary_number_15 = '1111'
 decimal_number_15 = int(binary_number_15, 2)
 ```
 
-> Notice that we are representing the binary number as a string. We do this because if we were to represent the binary number as an integer, Python would interpret it as a decimal number. We can also use the `0b` prefix to represent binary numbers in Python. For example, `0b1111` is the decimal number `15` binary representation.
+> Notice that we are representing the binary number as a string. We do this because if we were to represent the binary number as an integer, Python would interpret it as a decimal number. We can also use the `0b` prefix to represent binary numbers in Python. For example, `'0b1111'` is the decimal number `15` binary representation of course this will still be a string.
 
 By printing `decimal_number_15`, we should see `15` as the output. It's just that simple!
 
@@ -262,7 +264,7 @@ While we might not need to use bitwise operators daily, it's good to know they e
 
 Understanding binary numbers is a fundamental concept in computer science and digital electronics. While Python abstracts away many of the complexities of binary arithmetic, it's essential to have a basic understanding of how binary numbers work.
 
-In Python, binary numbers are represented using the prefix `0b`, and you can easily convert between binary and other number systems using built-in functions like `bin()` and `int()`. For example, the `bin()` function allows you to convert a decimal number to binary, while `int()` can convert a binary string back to decimal by specifying base 2.
+In Python, binary numbers are represented using the prefix `0b`, and you can easily convert between binary and decimal numbers using built-in functions like `bin()` and `int()`. For example, the `bin()` function allows you to convert a decimal number to binary, while `int()` can convert a binary string back to decimal by specifying base 2.
 
 Python also supports bitwise operations, which operate directly on the binary representations of numbers. Familiar bitwise operators include `AND` (`&`), `OR` (`|`), `XOR` (`^`), and `NOT` (`~`), as well as bit shifts (`<<` for left shift and `>>` for right shift). These operations are useful for tasks like setting, clearing, or toggling specific bits in a number.
 
