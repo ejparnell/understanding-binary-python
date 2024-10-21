@@ -13,23 +13,6 @@ In this section, we will cover the following topics:
 - Bitwise Operators in Python
   - AND (&), OR (|), XOR (^), NOT (~)
   - Bit shifting (left shift << and right shift >>)
-- Applications of Binary in Python
-  - Binary search algorithm (basic introduction to searching using binary logic)
-  - Binary file handling in Python (using open() in binary mode)
-  - Practical use cases (e.g., working with binary data, encryption basics, etc.)
-- Boolean Logic and Binary
-  - Boolean values (True/False)
-  - Relating binary values (0/1) to False and True
-  - Boolean operations (and, or, not) in Python and their binary equivalents
-- Binary Conversion Functions in Python
-  - Decimal to binary (bin())
-  - Binary to decimal (int(binary_str, 2))
-  - Decimal to hexadecimal (hex())
-  - Binary to hexadecimal conversions
-- Floating Point Numbers and Binary
-  - Basic explanation of floating-point representation in binary
-  - IEEE 754 floating-point standard (overview)
-  - Understanding precision errors with floating-point numbers
 
 While it's not essential that you have a deep understanding of Python to complete this lesson, it's recommended that you have a basic understanding of Python syntax and data types.
 
@@ -58,7 +41,7 @@ Number: 3
 Binary: 11
 ```
 
-> tktk Visual representation of counting in binary can be viewed here. (create and add image)
+> Visual representation of counting in binary can be viewed [here](https://miro.com/app/board/uXjVLPvqrtY=/?share_link_id=312168821196). 
 
 ### Convert Decimal Numbers to Binary
 
@@ -275,10 +258,12 @@ print(bin(result_right_shift)) # Output: '0b1'
 
 While we might not need to use bitwise operators on a daily basis, it's good to know that they exist and how they work. They are often used in low-level programming, cryptography, and other specialized fields. Plus this might be very useful in interviews!
 
-## Applications of Binary in Python
+## Summary
 
-Now that we have a solid understanding of binary numbers and bitwise operators, let's explore some practical applications of binary in Python.
+Understanding binary numbers is a fundamental concept in computer science and digital electronics. While Python abstracts away many of the complexities of binary arithmetic, it's important to have a basic understanding of how binary numbers work.
 
-- **Binary File Handling in Python**: Using `open()` in binary mode.
-- **Practical Use Cases**: Working with binary data and encryption basics.
+In Python, binary numbers are represented using the prefix `0b` or `0B`, and you can easily convert between binary and other number systems using built-in functions like `bin()` and `int()`. For example, the `bin()` function allows you to convert a decimal number to binary, while `int()` can convert a binary string back to decimal by specifying base 2.
 
+Python also supports bitwise operations, which operate directly on the binary representations of numbers. Common bitwise operators include `AND` (`&`), `OR` (`|`), `XOR` (`^`), and `NOT` (`~`), as well as bit shifts (`<<` for left shift and `>>` for right shift). These operations are useful for tasks like setting, clearing, or toggling specific bits in a number.
+
+Despite Python’s high-level nature, a strong understanding of binary numbers can help you optimize performance, especially in areas such as data compression, cryptography, and low-level algorithms.
